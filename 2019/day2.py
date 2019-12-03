@@ -16,8 +16,6 @@ with open("day2.txt") as fp:
         chunk = values[i : i + 4]
         if chunk[0] in [1, 2]:
             op = OPCODES[chunk[0]]
-            input_1 = values[chunk[1]]
-            input_2 = values[chunk[2]]
             values[chunk[3]] = op(values[chunk[1]], values[chunk[2]])
         elif chunk[0] == 99:
             break
